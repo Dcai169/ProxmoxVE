@@ -20,7 +20,7 @@ if ! grep -qEi 'ubuntu' /etc/os-release; then
   fetch_and_deploy_gh_release "intel-libgdgmm12" "intel/compute-runtime" "binary" "latest" "" "libigdgmm12_*_amd64.deb"
   fetch_and_deploy_gh_release "intel-opencl-icd" "intel/compute-runtime" "binary" "latest" "" "intel-opencl-icd_*_amd64.deb"
 else
-  $STD apt -y install intel-ocl-icd
+  $STD apt -y install intel-opencl-icd
 fi
 
 $STD apt -y install {va-driver-all,ocl-icd-libopencl1,vainfo,intel-gpu-tools}
